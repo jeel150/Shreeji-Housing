@@ -1,0 +1,2460 @@
+/* ===================================
+   INVESTORS PAGE - FULLY RESPONSIVE CSS
+   =================================== */
+
+/* Universal Box Sizing & Overflow Prevention */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+body {
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+.investors-page {
+  font-family: 'Arial', sans-serif;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+/* ===================================
+   HERO SECTION - BASE STYLES
+   =================================== */
+
+.investors-hero {
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.9) 0%, rgba(42, 82, 152, 0.9) 100%),
+              var(--hero-bg-image, linear-gradient(135deg, #1e3c72 0%, #2a5298 100%));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 100px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.investors-hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+.investors-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.investors-hero-content h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7),
+               1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.investors-hero-content p {
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+   1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+  margin-top: 2rem;
+  max-width: 100%;
+}
+
+.stat-item {
+  text-align: center;
+  margin-right:6rem;
+}
+
+.stat-icon {
+  font-size: 2rem;
+  color: #ff6b35;
+  margin-bottom: 1rem;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.7));
+}
+
+.stat-item h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8),
+               2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.stat-item p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7),
+               1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+/* ===================================
+   FINANCIAL PERFORMANCE
+   =================================== */
+
+.financial-performance {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.metric-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 4px solid #1e3c72;
+}
+
+.metric-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+}
+
+.metric-value {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.metric-value h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #1e3c72;
+  margin: 0;
+}
+
+.metric-change {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+}
+
+.metric-change.positive {
+  background: #d4edda;
+  color: #155724;
+}
+
+.metric-change.negative {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+.metric-card h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.metric-card p {
+  color: #666;
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* ===================================
+   INVESTOR RESOURCES
+   =================================== */
+
+.investor-resources {
+  padding: 80px 0;
+}
+
+.reports-section h2 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.reports-section p {
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.reports-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.report-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid #e9ecef;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+}
+
+.report-item:hover {
+  border-color: #1e3c72;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-icon {
+  background: #1e3c72;
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.report-icon svg {
+  font-size: 1.5rem;
+}
+
+.report-details {
+  flex: 1;
+  min-width: 200px;
+}
+
+.report-details h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.report-meta {
+  display: flex;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #666;
+  flex-wrap: wrap;
+}
+
+.report-meta span {
+  background: #f8f9fa;
+  padding: 0.25rem 0.5rem;
+  border-radius: 5px;
+}
+
+.download-btn {
+  background: #ff6b35;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  white-space: nowrap;
+}
+
+.download-btn:hover {
+  background: #e55a2b;
+  transform: translateY(-2px);
+}
+
+/* ===================================
+   EVENTS SECTION
+   =================================== */
+
+.events-section {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  height: fit-content;
+}
+
+.events-section h3 {
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.events-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.event-item {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  border: 2px solid #e9ecef;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  flex-wrap: wrap;
+  align-items: center;
+  position: relative;
+}
+
+.event-item:hover {
+  border-color: #1e3c72;
+}
+
+.event-details {
+  margin-bottom: 10px;
+  flex: 1;
+  min-width: 150px;
+}
+
+.event-date {
+  color: #1e3c72;
+  font-weight: 700;
+  flex-shrink: 0;
+  min-width: 80px;
+}
+
+.event {
+  color: #333;
+  margin-bottom: -1.25rem;
+  font-weight: 600;
+  text-align: left;
+}
+
+.event-type {
+  background: #1e3c72;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* ===================================
+   GROWTH STORY
+   =================================== */
+
+.growth-story {
+  padding: 80px 0;
+  background: #f8f9fa;
+  margin-top: -60px;
+}
+
+.growth-content h3 {
+  color: #1e3c72;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+  
+}
+
+.growth-content p {
+  color: #666;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.growth-highlights {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.highlight-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex: 1;
+  min-width: 250px;
+}
+
+.highlight-item svg {
+  color: #ff6b35;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.highlight-item h4 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.highlight-item p {
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.growth-image {
+  height: 400px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+}
+
+.growth-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(transparent 50%, rgba(0, 0, 0, 0.3) 100%);
+  z-index: 0;
+}
+
+.growth-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(30, 60, 114, 0.95));
+  color: white;
+  padding: 2rem;
+  z-index: 1;
+}
+
+.growth-overlay h4 {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.growth-overlay p {
+  margin: 0;
+  opacity: 0.95;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+}
+
+/* ===================================
+   STOCK PERFORMANCE
+   =================================== */
+
+.stock-performance {
+  background: linear-gradient(135deg, rgba(30, 60, 114, 0.9) 0%, rgba(42, 82, 152, 0.9) 100%),
+              var(--stock-bg-image, linear-gradient(135deg, #1e3c72 0%, #2a5298 100%));
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.stock-performance::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.stock-performance > * {
+  position: relative;
+  z-index: 1;
+}
+
+.stock-performance h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8),
+               2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.stock-performance p {
+  font-size: 1.2rem;
+  margin-bottom: 3rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8),
+               1px 1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.stock-metrics {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.stock-metric {
+  text-align: center;
+  min-width: 150px;
+}
+
+.stock-metric h3 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ff6b35;
+  margin-bottom: 0.5rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8),
+               2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+
+.stock-metric p {
+  margin: 0;
+  font-weight: 600;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+.cta-buttons{
+  display:flex;
+  justify-content:center;
+  gap:2rem;
+  margin-top:2rem;
+
+}
+
+/* ===================================
+   CTA SECTION
+   =================================== */
+
+.investors-cta {
+  background: white;
+  padding: 60px 0;
+  border-top: 4px solid #1e3c72;
+}
+
+.investors-cta h2 {
+  color: #1e3c72;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.investors-cta p {
+  color: #666;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+/* ===================================
+   MACBOOK PRO 16" - 2560x1664 & 2560x1600
+   =================================== */
+
+@media screen and (min-width: 2560px) {
+  .investors-hero {
+    padding: 120px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 4.5rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.6rem;
+  }
+
+  .hero-stats {
+    gap: 6rem;
+    max-width: 70%;
+  }
+
+  .stat-icon {
+    font-size: 2.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2.8rem;
+  }
+
+  .stat-item p {
+    font-size: 1.3rem;
+  }
+
+  .financial-performance {
+    padding: 100px 0;
+  }
+
+  .metrics-grid {
+    gap: 3rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
+
+  .metric-card {
+    padding: 3rem;
+  }
+
+  .metric-value h3 {
+    font-size: 3.5rem;
+  }
+
+  .investor-resources {
+    padding: 100px 0;
+  }
+
+  .report-item {
+    padding: 2rem;
+  }
+
+  .events-section {
+    padding: 3rem;
+  }
+
+  .growth-story {
+    padding: 100px 0;
+  }
+
+  .growth-image {
+    height: 500px;
+  }
+
+  .growth-overlay {
+    padding: 3rem;
+  }
+
+  .stock-performance {
+    padding: 100px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 4rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.5rem;
+  }
+
+  .stock-metrics {
+    gap: 4rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 3.5rem;
+  }
+
+  .stock-metric p {
+    font-size: 1.3rem;
+  }
+}
+
+/* ===================================
+   FULL HD - 1920x1080
+   =================================== */
+
+@media screen and (min-width: 1920px) and (max-width: 2559px) {
+  .investors-hero {
+    padding: 110px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 4rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.5rem;
+  }
+
+  .hero-stats {
+    gap: 5.5rem;
+    max-width: 75%;
+  }
+
+  .stat-icon {
+    font-size: 2.3rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2.5rem;
+  }
+
+  .stat-item p {
+    font-size: 1.2rem;
+  }
+
+  .financial-performance {
+    padding: 90px 0;
+  }
+
+  .metrics-grid {
+    gap: 2.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  }
+
+  .metric-card {
+    padding: 2.5rem;
+  }
+
+  .metric-value h3 {
+    font-size: 3rem;
+  }
+
+  .investor-resources {
+    padding: 90px 0;
+  }
+
+  .report-item {
+    padding: 2rem;
+  }
+
+  .events-section {
+    padding: 2.5rem;
+  }
+
+  .growth-story {
+    padding: 90px 0;
+  }
+
+  .growth-image {
+    height: 450px;
+  }
+
+  .growth-overlay {
+    padding: 2.5rem;
+  }
+
+  .stock-performance {
+    padding: 90px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 3.5rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.4rem;
+  }
+
+  .stock-metrics {
+    gap: 3.5rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 3rem;
+  }
+
+  .stock-metric p {
+    font-size: 1.2rem;
+  }
+}
+
+/* ===================================
+   QHD/2K - 1440px (SPECIFIC OPTIMIZATION)
+   =================================== */
+
+@media screen and (width: 1440px),
+       screen and (min-width: 1440px) and (max-width: 1440px) {
+  .investors-hero {
+    padding: 100px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.3rem;
+  }
+
+  .hero-stats {
+    gap: 5rem;
+    max-width: 80%;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+  }
+
+  .financial-performance {
+    padding: 80px 0;
+  }
+
+  .metrics-grid {
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+
+  .metric-card {
+    padding: 2rem;
+  }
+
+  .metric-value h3 {
+    font-size: 2.5rem;
+  }
+
+  .investor-resources {
+    padding: 80px 0;
+  }
+
+  .report-item {
+    padding: 1.5rem;
+  }
+
+  .events-section {
+    padding: 2rem;
+  }
+
+  .growth-story {
+    padding: 80px 0;
+  }
+
+  .growth-image {
+    height: 400px;
+  }
+
+  .growth-overlay {
+    padding: 2rem;
+  }
+
+  .stock-performance {
+    padding: 80px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 3rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.2rem;
+  }
+
+  .stock-metrics {
+    gap: 3rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 2.5rem;
+  }
+
+  .stock-metric p {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================
+   STANDARD HD RANGE - 1441-1919px
+   =================================== */
+
+@media screen and (min-width: 1441px) and (max-width: 1919px) {
+  .investors-hero {
+    padding: 100px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 3.5rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.3rem;
+  }
+
+  .hero-stats {
+    gap: 5rem;
+    max-width: 80%;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  .stat-item h3 {
+    font-size: 2rem;
+  }
+
+  .stat-item p {
+    font-size: 1rem;
+  }
+
+  .financial-performance {
+    padding: 80px 0;
+  }
+
+  .metrics-grid {
+    gap: 2rem;
+  }
+
+  .investor-resources {
+    padding: 80px 0;
+  }
+
+  .growth-story {
+    padding: 80px 0;
+  }
+
+  .growth-image {
+    height: 400px;
+  }
+
+  .stock-performance {
+    padding: 80px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 3rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.2rem;
+  }
+
+  .stock-metrics {
+    gap: 3rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* ===================================
+   MACBOOK AIR 13" - 1440x900 & SIMILAR
+   =================================== */
+
+@media screen and (min-width: 1366px) and (max-width: 1440px) {
+  .investors-hero {
+    padding: 90px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 3.2rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.25rem;
+  }
+
+  .hero-stats {
+    gap: 4rem;
+    max-width: 85%;
+  }
+
+  .stat-icon {
+    font-size: 1.9rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.9rem;
+  }
+
+  .stat-item p {
+    font-size: 0.95rem;
+  }
+
+  .financial-performance {
+    padding: 70px 0;
+  }
+
+  .metrics-grid {
+    gap: 1.75rem;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+
+  .metric-card {
+    padding: 1.75rem;
+  }
+
+  .metric-value h3 {
+    font-size: 2.3rem;
+  }
+
+  .investor-resources {
+    padding: 70px 0;
+  }
+
+  .report-item {
+    padding: 1.5rem;
+  }
+
+  .events-section {
+    padding: 1.75rem;
+  }
+
+  .growth-story {
+    padding: 70px 0;
+  }
+
+  .growth-image {
+    height: 380px;
+  }
+
+  .growth-overlay {
+    padding: 1.75rem;
+  }
+
+  .stock-performance {
+    padding: 70px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 2.8rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.15rem;
+  }
+
+  .stock-metrics {
+    gap: 2.5rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 2.3rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===================================
+   SMALLER LAPTOPS - 1280-1365px
+   =================================== */
+
+@media screen and (min-width: 1280px) and (max-width: 1365px) {
+  .investors-hero {
+    padding: 80px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 3rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.2rem;
+  }
+
+  .hero-stats {
+    gap: 3rem;
+    max-width: 90%;
+  }
+
+  .stat-icon {
+    font-size: 1.8rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.8rem;
+  }
+
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+
+  .financial-performance {
+    padding: 60px 0;
+  }
+
+  .metrics-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .metric-card {
+    padding: 1.5rem;
+  }
+
+  .metric-value h3 {
+    font-size: 2.2rem;
+  }
+
+  .investor-resources {
+    padding: 60px 0;
+  }
+
+  .report-item {
+    padding: 1.25rem;
+  }
+
+  .events-section {
+    padding: 1.5rem;
+  }
+
+  .growth-story {
+    padding: 60px 0;
+  }
+
+  .growth-image {
+    height: 350px;
+  }
+
+  .growth-overlay {
+    padding: 1.5rem;
+  }
+
+  .stock-performance {
+    padding: 60px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 2.5rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.1rem;
+  }
+
+  .stock-metrics {
+    gap: 2rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 2.2rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   LARGE TABLETS - 1200-1279px
+   =================================== */
+
+@media screen and (min-width: 1200px) and (max-width: 1279px) {
+  .investors-hero {
+    padding: 70px 0;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 2.8rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.15rem;
+  }
+
+  .hero-stats {
+    gap: 2.5rem;
+    max-width: 95%;
+  }
+
+  .stat-icon {
+    font-size: 1.7rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.7rem;
+  }
+
+  .stat-item p {
+    font-size: 0.9rem;
+  }
+
+  .financial-performance {
+    padding: 60px 0;
+  }
+
+  .metrics-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .metric-card {
+    padding: 1.5rem;
+  }
+
+  .metric-value h3 {
+    font-size: 2rem;
+  }
+
+  .investor-resources {
+    padding: 60px 0;
+  }
+
+  .report-item {
+    padding: 1.25rem;
+  }
+
+  .events-section {
+    padding: 1.5rem;
+  }
+
+  .event-type {
+    position: static;
+    margin-left: 0;
+    margin-top: 0.5rem;
+  }
+
+  .growth-story {
+    padding: 60px 0;
+  }
+
+  .growth-highlights {
+    gap: 1.5rem;
+  }
+
+  .growth-image {
+    height: 320px;
+  }
+
+  .growth-overlay {
+    padding: 1.5rem;
+  }
+
+  .stock-performance {
+    padding: 60px 0;
+  }
+
+  .stock-performance h2 {
+    font-size: 2.3rem;
+  }
+
+  .stock-performance p {
+    font-size: 1.05rem;
+  }
+
+  .stock-metrics {
+    gap: 2rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 2rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   TABLETS - 768-1199px
+   =================================== */
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .investors-hero {
+    padding: 60px 0;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1.1rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 100%;
+    justify-items: center;
+  }
+
+  .stat-icon {
+    font-size: 1.6rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.6rem;
+  }
+
+  .stat-item p {
+    font-size: 0.85rem;
+  }
+
+  .financial-performance {
+    padding: 50px 0;
+  }
+
+  .metrics-grid {
+    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  }
+
+  .metric-card {
+    padding: 1.25rem;
+  }
+
+  .metric-value h3 {
+    font-size: 1.9rem;
+  }
+
+  .investor-resources {
+    padding: 50px 0;
+  }
+
+  .report-item {
+    padding: 1.25rem;
+  }
+
+  .events-section {
+    padding: 1.5rem;
+  }
+
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-type {
+    position: static;
+    margin-left: 0;
+    align-self: flex-start;
+  }
+
+  .growth-story {
+    padding: 50px 0;
+  }
+
+  .growth-content p {
+    font-size: 1.05rem;
+  }
+
+  .growth-highlights {
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-left: 0;
+  }
+
+  .highlight-item {
+    min-width: 100%;
+  }
+
+  .growth-image {
+    height: 300px;
+  }
+
+  .growth-overlay {
+    padding: 1.5rem;
+  }
+
+  .stock-performance {
+    padding: 50px 0;
+    background-attachment: scroll;
+  }
+
+  .stock-performance h2 {
+    font-size: 2.2rem;
+  }
+
+  .stock-performance p {
+    font-size: 1rem;
+  }
+
+  .stock-metrics {
+    gap: 2rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 1.9rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.85rem;
+  }
+
+  .investors-cta {
+    padding: 50px 0;
+  }
+
+  .investors-cta p {
+    font-size: 1.05rem;
+  }
+}
+
+/* ===================================
+   SMALL TABLETS - 600-767px
+   =================================== */
+
+@media screen and (min-width: 600px) and (max-width: 767px) {
+  .investors-hero {
+    padding: 50px 0;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    max-width: 100%;
+  }
+
+  .stat-icon {
+    font-size: 1.5rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.5rem;
+  }
+
+  .stat-item p {
+    font-size: 0.8rem;
+  }
+
+  .financial-performance {
+    padding: 40px 0;
+  }
+
+  .metrics-grid {
+    gap: 1.25rem;
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    padding: 1.25rem;
+  }
+
+  .metric-value h3 {
+    font-size: 1.8rem;
+  }
+
+  .investor-resources {
+    padding: 40px 0;
+  }
+
+  .report-item {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .report-meta {
+    justify-content: center;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .events-section {
+    padding: 1.25rem;
+  }
+
+  .event-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-date {
+    min-width: 100%;
+  }
+
+  .event-type {
+    position: static;
+    margin-left: 0;
+  }
+
+  .growth-story {
+    padding: 40px 0;
+  }
+
+  .growth-content p {
+    font-size: 1rem;
+  }
+
+  .growth-highlights {
+    flex-direction: column;
+    gap: 1.25rem;
+    margin-left: 0;
+  }
+
+  .highlight-item {
+    min-width: 100%;
+  }
+
+  .growth-image {
+    height: 280px;
+  }
+
+  .growth-overlay {
+    padding: 1.25rem;
+  }
+
+  .stock-performance {
+    padding: 40px 0;
+    background-attachment: scroll;
+  }
+
+  .stock-performance h2 {
+    font-size: 2rem;
+  }
+
+  .stock-performance p {
+    font-size: 0.95rem;
+  }
+
+  .stock-metrics {
+    gap: 1.5rem;
+  }
+
+  .stock-metric h3 {
+    font-size: 1.8rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.8rem;
+  }
+
+  .investors-cta {
+    padding: 40px 0;
+  }
+
+  .investors-cta h2 {
+    font-size: 1.8rem;
+  }
+
+  .investors-cta p {
+    font-size: 1rem;
+  }
+}
+
+/* ===================================
+   MOBILE LANDSCAPE - 480-599px
+   =================================== */
+
+@media screen and (min-width: 480px) and (max-width: 599px) {
+  .investors-hero {
+    padding: 40px 0;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 1.9rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    max-width: 100%;
+  }
+
+  .stat-icon {
+    font-size: 1.4rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.4rem;
+  }
+
+  .stat-item p {
+    font-size: 0.75rem;
+  }
+
+  .financial-performance {
+    padding: 35px 0;
+  }
+
+  .metrics-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metric-value h3 {
+    font-size: 1.7rem;
+  }
+
+  .metric-change {
+    font-size: 0.85rem;
+  }
+
+  .metric-card h4 {
+    font-size: 0.95rem;
+  }
+
+  .investor-resources {
+    padding: 35px 0;
+  }
+
+  .reports-section h2 {
+    font-size: 1.7rem;
+  }
+
+  .report-item {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .report-icon {
+    width: 45px;
+    height: 45px;
+  }
+
+  .report-icon svg {
+    font-size: 1.3rem;
+  }
+
+  .report-details h4 {
+    font-size: 0.95rem;
+  }
+
+  .report-meta {
+    justify-content: center;
+    font-size: 0.8rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.9rem;
+  }
+
+  .events-section {
+    padding: 1.25rem;
+  }
+
+  .events-section h3 {
+    font-size: 1.5rem;
+  }
+
+  .event-item {
+    padding: 0.85rem;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event-date {
+    min-width: 100%;
+    font-size: 0.9rem;
+  }
+
+  .event {
+    font-size: 0.9rem;
+  }
+
+  .event-type {
+    position: static;
+    margin-left: 0;
+    font-size: 0.75rem;
+  }
+
+  .growth-story {
+    padding: 35px 0;
+  }
+
+  .growth-content h3 {
+    font-size: 1.6rem;
+  }
+
+  .growth-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .growth-highlights {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    margin-left: 0;
+  }
+
+  .highlight-item {
+    min-width: 100%;
+  }
+
+  .highlight-item svg {
+    font-size: 1.3rem;
+  }
+
+  .highlight-item h4 {
+    font-size: 0.95rem;
+  }
+
+  .highlight-item p {
+    font-size: 0.85rem;
+  }
+
+  .growth-image {
+    height: 250px;
+  }
+
+  .growth-overlay {
+    padding: 1rem;
+  }
+
+  .growth-overlay h4 {
+    font-size: 1.1rem;
+  }
+
+  .growth-overlay p {
+    font-size: 0.85rem;
+  }
+
+  .stock-performance {
+    padding: 35px 0;
+    background-attachment: scroll;
+  }
+
+  .stock-performance h2 {
+    font-size: 1.8rem;
+  }
+
+  .stock-performance p {
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .stock-metrics {
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .stock-metric {
+    min-width: 120px;
+  }
+
+  .stock-metric h3 {
+    font-size: 1.7rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.75rem;
+  }
+
+  .investors-cta {
+    padding: 35px 0;
+  }
+
+  .investors-cta h2 {
+    font-size: 1.7rem;
+  }
+
+  .investors-cta p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ===================================
+   MOBILE PORTRAIT - 320-479px
+   =================================== */
+
+@media screen and (min-width: 320px) and (max-width: 479px) {
+  .investors-hero {
+    padding: 35px 0;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  .stat-icon {
+    font-size: 1.3rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .stat-item p {
+    font-size: 0.7rem;
+  }
+
+  .financial-performance {
+    padding: 30px 0;
+  }
+
+  .metrics-grid {
+    gap: 1rem;
+    grid-template-columns: 1fr;
+    margin-top: 2rem;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metric-value {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .metric-value h3 {
+    font-size: 1.6rem;
+  }
+
+  .metric-change {
+    font-size: 0.8rem;
+  }
+
+  .metric-card h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .metric-card p {
+    font-size: 0.85rem;
+  }
+
+  .investor-resources {
+    padding: 30px 0;
+  }
+
+  .reports-section h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .reports-section p {
+    font-size: 0.9rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .report-item {
+    padding: 1rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.75rem;
+  }
+
+  .report-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .report-icon svg {
+    font-size: 1.2rem;
+  }
+
+  .report-details h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .report-meta {
+    justify-content: center;
+    font-size: 0.75rem;
+    gap: 0.5rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+  }
+
+  .events-section {
+    padding: 1rem;
+  }
+
+  .events-section h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .event-item {
+    padding: 0.75rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .event-date {
+    min-width: 100%;
+    font-size: 0.85rem;
+    margin-top: 0;
+  }
+
+  .event {
+    font-size: 0.85rem;
+    margin-bottom: 0;
+  }
+
+  .event-details {
+    margin-bottom: 0.5rem;
+  }
+
+  .event-type {
+    position: static;
+    margin-left: 0;
+    font-size: 0.7rem;
+  }
+
+  .growth-story {
+    padding: 30px 0;
+  }
+
+  .growth-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .growth-content p {
+    font-size: 0.9rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .growth-highlights {
+    flex-direction: column;
+    gap: 1rem;
+    margin-bottom: 1.75rem;
+    margin-left: 0;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
+    gap: 0.75rem;
+  }
+
+  .highlight-item svg {
+    font-size: 1.2rem;
+  }
+
+  .highlight-item h4 {
+    font-size: 0.9rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .highlight-item p {
+    font-size: 0.8rem;
+  }
+
+  .growth-image {
+    height: 220px;
+  }
+
+  .growth-overlay {
+    padding: 1rem;
+  }
+
+  .growth-overlay h4 {
+    font-size: 1rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .growth-overlay p {
+    font-size: 0.8rem;
+  }
+
+  .stock-performance {
+    padding: 30px 0;
+    background-attachment: scroll;
+  }
+
+  .stock-performance h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .stock-performance p {
+    font-size: 0.85rem;
+    margin-bottom: 1.75rem;
+  }
+
+  .stock-metrics {
+    gap: 1.25rem;
+    margin-bottom: 1.75rem;
+    flex-direction: column;
+  }
+
+  .stock-metric {
+    min-width: 100%;
+  }
+
+  .stock-metric h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.7rem;
+  }
+
+  .investors-cta {
+    padding: 30px 0;
+  }
+
+  .investors-cta h2 {
+    font-size: 1.6rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .investors-cta p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ===================================
+   EXTRA SMALL MOBILE - <320px
+   =================================== */
+
+@media screen and (max-width: 319px) {
+  .investors-hero {
+    padding: 30px 0;
+    text-align: center;
+    background-attachment: scroll;
+  }
+
+  .investors-hero-content h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .investors-hero-content p {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-stats {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    max-width: 100%;
+    margin-top: 1.25rem;
+  }
+
+  .stat-icon {
+    font-size: 1.2rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .stat-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stat-item p {
+    font-size: 0.65rem;
+  }
+
+  .financial-performance {
+    padding: 25px 0;
+  }
+
+  .metrics-grid {
+    gap: 0.85rem;
+    grid-template-columns: 1fr;
+    margin-top: 1.5rem;
+  }
+
+  .metric-card {
+    padding: 0.85rem;
+  }
+
+  .metric-value {
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .metric-value h3 {
+    font-size: 1.5rem;
+  }
+
+  .metric-change {
+    font-size: 0.75rem;
+  }
+
+  .metric-card h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .metric-card p {
+    font-size: 0.8rem;
+  }
+
+  .investor-resources {
+    padding: 25px 0;
+  }
+
+  .reports-section h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .reports-section p {
+    font-size: 0.85rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .report-item {
+    padding: 0.85rem;
+    flex-direction: column;
+    text-align: center;
+    gap: 0.65rem;
+  }
+
+  .report-icon {
+    width: 38px;
+    height: 38px;
+  }
+
+  .report-icon svg {
+    font-size: 1.1rem;
+  }
+
+  .report-details h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .report-meta {
+    justify-content: center;
+    font-size: 0.7rem;
+    gap: 0.4rem;
+  }
+
+  .download-btn {
+    width: 100%;
+    justify-content: center;
+    padding: 0.55rem 0.9rem;
+    font-size: 0.8rem;
+  }
+
+  .events-section {
+    padding: 0.85rem;
+  }
+
+  .events-section h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .event-item {
+    padding: 0.65rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .event-date {
+    min-width: 100%;
+    font-size: 0.8rem;
+    margin-top: 0;
+  }
+
+  .event {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+  }
+
+  .event-details {
+    margin-bottom: 0.4rem;
+  }
+
+  .event-type {
+    position: static;
+    margin-left: 0;
+    font-size: 0.65rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .growth-story {
+    padding: 25px 0;
+  }
+
+  .growth-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 0.85rem;
+  }
+
+  .growth-content p {
+    font-size: 0.85rem;
+    margin-bottom: 1rem;
+  }
+
+  .growth-highlights {
+    flex-direction: column;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+    margin-left: 0;
+  }
+
+  .highlight-item {
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 100%;
+    gap: 0.65rem;
+  }
+
+  .highlight-item svg {
+    font-size: 1.1rem;
+  }
+
+  .highlight-item h4 {
+    font-size: 0.85rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .highlight-item p {
+    font-size: 0.75rem;
+  }
+
+  .growth-image {
+    height: 200px;
+  }
+
+  .growth-overlay {
+    padding: 0.85rem;
+  }
+
+  .growth-overlay h4 {
+    font-size: 0.95rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .growth-overlay p {
+    font-size: 0.75rem;
+  }
+
+  .stock-performance {
+    padding: 25px 0;
+    background-attachment: scroll;
+  }
+
+  .stock-performance h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .stock-performance p {
+    font-size: 0.8rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .stock-metrics {
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-direction: column;
+  }
+
+  .stock-metric {
+    min-width: 100%;
+  }
+
+  .stock-metric h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .stock-metric p {
+    font-size: 0.65rem;
+  }
+
+  .investors-cta {
+    padding: 25px 0;
+  }
+
+  .investors-cta h2 {
+    font-size: 1.4rem;
+    margin-bottom: 0.65rem;
+  }
+
+  .investors-cta p {
+    font-size: 0.85rem;
+  }
+}
+
+/* ===================================
+   PRINT STYLES
+   =================================== */
+
+@media print {
+  .investors-hero {
+    background: white !important;
+    color: black !important;
+    padding: 40px 0 !important;
+    page-break-after: avoid;
+  }
+
+  .investors-hero::before {
+    display: none !important;
+  }
+
+  .investors-hero-content h1,
+  .investors-hero-content p,
+  .stat-item h3,
+  .stat-item p {
+    color: black !important;
+    text-shadow: none !important;
+  }
+
+  .stat-item h3 {
+    color: #ff6b35 !important;
+  }
+
+  .stat-icon {
+    filter: none !important;
+  }
+
+  .financial-performance {
+    padding: 30px 0 !important;
+    background: white !important;
+  }
+
+  .metric-card {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+
+  .metric-card:hover {
+    transform: none !important;
+  }
+
+  .investor-resources {
+    padding: 30px 0 !important;
+  }
+
+  .report-item {
+    box-shadow: none !important;
+    page-break-inside: avoid;
+  }
+
+  .download-btn {
+    display: none;
+  }
+
+  .events-section {
+    box-shadow: none !important;
+    border: 1px solid #ddd !important;
+    page-break-inside: avoid;
+  }
+
+  .growth-story {
+    padding: 30px 0 !important;
+    background: white !important;
+  }
+
+  .growth-image::before {
+    background: rgba(0, 0, 0, 0.2) !important;
+  }
+
+  .stock-performance {
+    background: white !important;
+    color: black !important;
+    padding: 30px 0 !important;
+  }
+
+  .stock-performance::before {
+    display: none !important;
+  }
+
+  .stock-performance h2,
+  .stock-performance p,
+  .stock-metric h3,
+  .stock-metric p {
+    color: black !important;
+    text-shadow: none !important;
+  }
+
+  .stock-metric h3 {
+    color: #ff6b35 !important;
+  }
+
+  .investors-cta {
+    page-break-before: auto;
+  }
+
+  a {
+    text-decoration: underline !important;
+  }
+}
+
+/* ===================================
+   ACCESSIBILITY ENHANCEMENTS
+   =================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .investors-hero,
+  .stock-performance {
+    background-attachment: scroll !important;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .investors-hero,
+  .stock-performance {
+    background: #000 !important;
+    color: #fff !important;
+  }
+
+  .investors-hero::before,
+  .stock-performance::before {
+    background: rgba(0, 0, 0, 0.8) !important;
+  }
+
+  .metric-card,
+  .report-item,
+  .events-section {
+    border: 3px solid #000 !important;
+  }
+
+  .growth-image::before {
+    background: rgba(0, 0, 0, 0.6) !important;
+  }
+}
